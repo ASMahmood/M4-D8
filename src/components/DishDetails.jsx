@@ -13,6 +13,7 @@ class DishDetails extends React.Component {
     let correctDishToLoad = allTheDishes.find(
       (dish) => dish.id.toString() === dishIdFromTheSearchBar
     );
+
     setTimeout(() => {
       this.setState({
         dish: correctDishToLoad,
@@ -27,11 +28,11 @@ class DishDetails extends React.Component {
   render() {
     return (
       <Container>
+        <audio hidden id="audio" controls>
+          <source src={"/yeet.mp3"} type="audio/mp3"></source>
+        </audio>
         {this.state.dish ? (
           <div>
-            <audio hidden id="audio" controls>
-              <source src={"/yeet.mp3"} type="audio/mp3"></source>
-            </audio>
             <Row className="my-2">
               <Col md={3}>
                 <img
