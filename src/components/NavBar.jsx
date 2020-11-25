@@ -17,6 +17,9 @@ class NavBar extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
+              {this.props.location.pathname === "/details/0" && (
+                <div className="nav-link">( ͡° ͜ʖ ͡°)</div>
+              )}
               <Link to="/menu">
                 <div
                   className={

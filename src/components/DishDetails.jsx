@@ -17,6 +17,10 @@ class DishDetails extends React.Component {
       this.setState({
         dish: correctDishToLoad,
       });
+      if (correctDishToLoad.name === "Sexy Carbonara") {
+        const audio = document.getElementById("audio");
+        audio.play();
+      }
     }, 1000);
   }
 
@@ -25,6 +29,9 @@ class DishDetails extends React.Component {
       <Container>
         {this.state.dish ? (
           <div>
+            <audio hidden id="audio" controls>
+              <source src={"/yeet.mp3"} type="audio/mp3"></source>
+            </audio>
             <Row className="my-2">
               <Col md={3}>
                 <img

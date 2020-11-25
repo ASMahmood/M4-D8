@@ -44,8 +44,10 @@ class Reservations extends React.Component {
           {this.state.reservations.map((reservation, index) => (
             <ListGroup key={index}>
               <ListGroup.Item>
-                Name: {reservation.name}, for {reservation.numberOfPersons}
-                at {reservation.dateTime}
+                <div>Name: {reservation.name},</div>
+                <div>Party size: {reservation.numberOfPersons}</div>
+                <div>Time: {reservation.dateTime}</div>
+                {console.log(reservation)}
               </ListGroup.Item>
             </ListGroup>
           ))}
